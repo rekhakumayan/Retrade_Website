@@ -1,0 +1,74 @@
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9fafb;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  min-width: 220px;
+  flex: 1;
+}
+
+.searchWrapper i {
+  color: #9ca3af;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* DEFAULT FILTER BUTTON */
+.filters button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  color:var(--color-cta);
+  font-size: 13px;
+  color:var(--color-cta);   
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+/* HOVER STATE */
+.filters button:hover {
+  background: #f3f4f6;
+  color: var(--color-cta);
+}
+
+/* REMOVE DEFAULT FOCUS */
+.filters button:focus {
+  outline: none;
+}
+
+.filters button.activeFilter {
+  background: var(--color-cta);
+  color: white;
+  border: 1px solid var(--color-cta);
+}
+
+/* ACTIVE HOVER (keeps active color) */
+.filters button.activeFilter:hover {
+   background-color: var(--color-cta);
+  border: 1px solid var(--color-cta);
+}

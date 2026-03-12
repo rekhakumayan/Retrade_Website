@@ -1,0 +1,109 @@
+/* Mobile Drawer */
+
+.sidebar {
+  width: 280px;
+  padding: 20px 20px 24px 20px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  height: calc(100vh - 65px);
+  background: #f8fafc;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  /* z-index: 1050; */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+
+}
+
+.overlay {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 65px);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+.sidebarClosed {
+  transform: translateX(-100%);
+}
+
+/* desktop */
+@media (min-width: 992px) {
+  .sidebar {
+    position: sticky;
+    transform: none !important;
+  }
+}
+
+
+
+/* Heading */
+.sidebarHeading {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+
+}
+
+/* Normal Button */
+.sidebarBtn {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  transition: all 0.2s ease;
+  text-align: left;
+  margin-top: 6px;
+  padding: 14px 17.5px;
+  font-weight: 500;
+}
+
+
+.sidebarBtn:hover {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* Active Button */
+.sidebarBtnActive {
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 900;
+  border: none;
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.2);
+}
+
+/* Footer */
+.sidebarFooter {
+  border-top: 1px solid rgba(203, 213, 225, 0.6);
+  margin-top: 35px;
+  padding-top: 35px;
+
+
+}
+
+/* Logout */
+.sidebarLogoutBtn {
+  background: transparent;
+  color: #64748b;
+  border: none;
+  transition: all 0.2s ease;
+  padding: 14px 17.5px;
+}
+
+.sidebarLogoutBtn:hover {
+  background: #fee2e2;
+  color: rgb(237, 14, 14)
+}

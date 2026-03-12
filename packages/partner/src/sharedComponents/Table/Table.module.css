@@ -1,0 +1,37 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th {
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #979a9f;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table td {
+  padding: 20px;
+  font-size: 11px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.empty {
+  text-align: center;
+  padding: 30px;
+  color: #9ca3af;
+  font-size: 14px;
+}

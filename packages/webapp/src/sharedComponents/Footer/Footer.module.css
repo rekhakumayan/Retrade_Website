@@ -1,0 +1,31 @@
+/* ── FOOTER ── */
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  height: 74.5px;
+  font-family: var(--font-base);
+}
+
+.copyright {
+  display: inline-block;
+  line-height: 17.5px;
+}
+
+/* ── LINK BUTTONS ── */
+.linkBtn {
+  line-height: 17.5px;
+  color: #64748B;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.linkBtn:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    height: 113px;
+  }
+}

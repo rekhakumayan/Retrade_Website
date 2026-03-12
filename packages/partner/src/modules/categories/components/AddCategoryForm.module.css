@@ -1,0 +1,12 @@
+
+.customInput:focus {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: none;
+  outline: none;
+}
+.cancelButton {
+  background: white !important;
+  color: var(--color-cta);
+  border: 1px solid var(--color-cta) !important;
+}

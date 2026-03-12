@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width:100%;
+  background-color: #F8FAFC;
+  border: 1px solid transparent;
+  padding: 0 12px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 14px;
+  background: transparent;
+  color: #9aa0a6;
+}
+
+.input::placeholder {
+  color: #9aa0a6;
+}
+
+.wrapper:focus-within {
+  border: 1px solid #6c63ff;
+}
+
+.icon {
+  color: #9aa0a6;
+}
