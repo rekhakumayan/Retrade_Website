@@ -1,0 +1,12 @@
+.rounded {
+    border-radius: 40px;
+}
+
+.colorPicker{
+    border-radius: 0 !important;
+    padding: 0;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

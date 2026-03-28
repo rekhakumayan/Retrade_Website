@@ -1,0 +1,52 @@
+.profileCard {
+  background: #ffffff;
+  border: 1.333px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-family: var(--font-base);
+  height: 128px;
+}
+.avatar {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 12px;
+  background: var(--text-primary);
+  font-size: 28px;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+  cursor: default;
+  user-select: none;
+}
+.profileName {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+  line-height: var(--lh-sm);
+  margin: 0;
+  height: 28px;
+}
+.customerId {
+  font-size: var(--fs-xxs);
+  color: var(--text-muted);
+  font-weight: var(--fw-medium);
+  user-select: none;
+}
+.metaDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.verifiedBadge {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: default;
+  user-select: none;
+}

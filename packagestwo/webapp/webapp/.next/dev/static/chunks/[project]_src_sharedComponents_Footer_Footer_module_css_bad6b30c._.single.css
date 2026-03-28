@@ -1,0 +1,32 @@
+/* [project]/src/sharedComponents/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__HWROaa__footer {
+  height: 74.5px;
+  font-family: var(--font-base);
+  background: #fff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.Footer-module__HWROaa__copyright {
+  line-height: 17.5px;
+  display: inline-block;
+}
+
+.Footer-module__HWROaa__linkBtn {
+  color: #64748b;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 17.5px;
+  transition: color .2s;
+}
+
+.Footer-module__HWROaa__linkBtn:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 767px) {
+  .Footer-module__HWROaa__footer {
+    height: 113px;
+  }
+}
+
+/*# sourceMappingURL=%5Bproject%5D_src_sharedComponents_Footer_Footer_module_css_bad6b30c._.single.css.map*/

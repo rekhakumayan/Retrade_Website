@@ -1,0 +1,9 @@
+export { default as ShieldCheckIcon } from "./ShieldCheckIcon";
+export { default as PackageIcon } from "./PackageIcon";
+export { default as MapPinIcon } from "./MapPinIcon";
+export { default as UserIcon } from "./UserIcon";
+export { default as ClockIcon } from "./ClockIcon";
+export { default as PlusIcon } from "./PlusIcon";
+export { default as MailIcon } from "./MailIcon";
+export { default as ChevronRightIcon } from "./ChevronRightIcon";
+export { default as BoxIcon  } from "./BoxIcon";

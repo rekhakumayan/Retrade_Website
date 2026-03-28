@@ -1,0 +1,79 @@
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+   margin-bottom: 20px; 
+}
+
+.headerLeft h1 {
+  font-size: 28px;
+  color:var(--color-primary) ;
+  font-weight: 700;
+  margin-bottom: 4px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.headerLeft p {
+  font-size: 14px;
+  color: #64748b;
+  margin-left:25px ;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper {
+  min-height: calc(100vh - 72px);
+  padding: clamp(16px, 3vw, 32px);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.tableCard {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #eaecf0;
+  padding: clamp(16px, 3vw, 24px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerRight {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pageInfo {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}

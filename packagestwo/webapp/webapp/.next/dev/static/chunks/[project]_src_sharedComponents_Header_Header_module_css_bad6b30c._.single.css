@@ -1,0 +1,116 @@
+/* [project]/src/sharedComponents/Header/Header.module.css [app-client] (css) */
+.Header-module__GTSj0a__header {
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(12px);
+  height: 57px;
+  font-family: var(--font-base);
+  background: #fffffff2;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px #0000000d;
+}
+
+.Header-module__GTSj0a__headerRow {
+  flex-wrap: nowrap;
+  height: 56px;
+}
+
+.Header-module__GTSj0a__logoGroup {
+  cursor: pointer;
+  width: fit-content;
+  height: 31.5px;
+}
+
+.Header-module__GTSj0a__logoIcon {
+  background-color: var(--text-primary);
+  width: 31.5px;
+  min-width: 31.5px;
+  height: 31.5px;
+  color: var(--text-btn);
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: box-shadow .2s;
+  box-shadow: 0 4px 8px #4f46e54d;
+}
+
+.Header-module__GTSj0a__logoGroup:hover .Header-module__GTSj0a__logoIcon {
+  box-shadow: 0 4px 14px #4f46e573;
+}
+
+.Header-module__GTSj0a__logoText {
+  font-size: var(--fs-md);
+  letter-spacing: -.3px;
+  white-space: nowrap;
+  margin: 0 0 0 7px;
+}
+
+.Header-module__GTSj0a__actionsRow {
+  height: 34px;
+}
+
+.Header-module__GTSj0a__cartWrapper {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  transition: background-color .2s;
+  position: relative;
+}
+
+.Header-module__GTSj0a__cartWrapper:hover {
+  background-color: #f1f5f9;
+}
+
+.Header-module__GTSj0a__cartWrapper:hover .Header-module__GTSj0a__cartBtn {
+  color: var(--text-primary);
+}
+
+.Header-module__GTSj0a__cartBtn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  transition: color .2s;
+}
+
+.Header-module__GTSj0a__cartBadge {
+  background: var(--text-primary);
+  width: 16px;
+  height: 16px;
+  color: var(--text-btn);
+  font-size: 9px;
+  font-weight: var(--fw-bold);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+
+.Header-module__GTSj0a__loginBtn {
+  height: 31.5px;
+  font-size: var(--fs-xs);
+  margin: 0 0 0 10.5px;
+  padding: 7px 17.5px !important;
+}
+
+.Header-module__GTSj0a__profileBtn {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 34px;
+  display: flex;
+  padding: 3.5px 7px !important;
+}
+
+.Header-module__GTSj0a__profileBtn:hover {
+  background: #f1f5f9;
+}
+
+/*# sourceMappingURL=%5Bproject%5D_src_sharedComponents_Header_Header_module_css_bad6b30c._.single.css.map*/

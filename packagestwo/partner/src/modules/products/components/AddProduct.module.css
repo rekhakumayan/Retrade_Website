@@ -1,0 +1,36 @@
+
+.customInput:focus {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: none;
+  outline: none;
+}
+
+.indigoBtn {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+}
+
+.indigoBtn:hover {
+  background-color: #4338ca;
+}
+
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end; /* pushes buttons to right */
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cancelButton {
+  background: white !important;
+  color: var(--color-cta) !important;
+  border: 1px solid var(--color-cta) !important;
+}
+
+.cancelButton:hover {
+  background: #f4f3ff;
+}
+

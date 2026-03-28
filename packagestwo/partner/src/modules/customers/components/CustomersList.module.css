@@ -1,0 +1,79 @@
+.profileText {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f1f5f9;
+}
+.viewBtn {
+  background: #f1f5f9;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.customerName {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.customerId {
+  font-size: 12px;
+  color: #6366f1;
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+}
+
+.ordersBadge {
+  background: #eef2ff;
+  color: #181384;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.spendAmount {
+  font-weight: 700;
+  font-size: 18px ;
+
+}
+
+.firstSeen{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5668;
+}
+
+.moreBtn {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pageInfo{
+  margin-top: 12px;
+}

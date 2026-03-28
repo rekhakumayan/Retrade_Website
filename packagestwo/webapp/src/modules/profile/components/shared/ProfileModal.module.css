@@ -1,0 +1,167 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1050;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1051;
+  overflow-y: auto;
+}
+
+.modalDialog {
+  min-height: 100%;
+  padding: 24px 16px;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1.333px solid #e2e8f0;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.modalHeader {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.modalTitle {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.closeBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover {
+  background: #f1f5f9;
+  color: var(--text-secondary);
+}
+
+.tagGroup {
+  gap: 8px;
+}
+
+.tagBtn {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-base);
+}
+
+.tagBtn:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.tagActive {
+  border-color: var(--text-primary);
+  background: #eef2ff;
+  color: var(--text-primary);
+}
+
+.fieldLabel {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  font-family: var(--font-base);
+  transition: all 0.15s;
+  outline: none;
+}
+
+.fieldInput::placeholder {
+  color: #cbd5e1;
+}
+
+.fieldInput:focus {
+  border-color: var(--text-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
+}
+
+.fieldError {
+  font-size: var(--fs-xxs);
+  color: #f43f5e;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+.modalFooter {
+  border-top: 1px solid #f1f5f9;
+}
+
+.apiError {
+  font-size: var(--fs-xs);
+  color: #f43f5e;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-weight: var(--fw-medium);
+}
+
+.apiSuccess {
+  font-size: var(--fs-xs);
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-weight: var(--fw-medium);
+}
+
+.pincodeValidating {
+  color: #94a3b8;
+  font-size: var(--fs-xs);
+  margin-top: 4px;
+}
+
+.readonlyInput {
+  cursor: not-allowed;
+  opacity: 0.7;
+}

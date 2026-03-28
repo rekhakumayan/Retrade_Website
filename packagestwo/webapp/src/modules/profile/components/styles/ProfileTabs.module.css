@@ -1,0 +1,318 @@
+.lowerSection {
+  background: #ffffff;
+  border: 1.333px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-family: var(--font-base);
+}
+
+.tabBtn {
+  padding: 17.5px 21px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  position: relative;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+
+.tabBtn:hover:not(.tabActive) {
+  color: #475569 !important;
+}
+.tabActive {
+  color: var(--text-primary) !important;
+}
+
+.tabIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--text-primary);
+  border-radius: 4px 4px 0 0;
+}
+
+.tabIcon {
+  flex-shrink: 0;
+}
+.tabLabel {
+  white-space: nowrap;
+  height: 17.5px;
+}
+
+.tabDash {
+  padding: 32px;
+  min-height: 400px;
+}
+
+.emptyOrder {
+  color: var(--text-muted);
+}
+
+.emptyIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f8fafc;
+  flex-shrink: 0;
+}
+
+.emptyIcon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.emptyText {
+  margin-top: 10.5px;
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+.orderCard {
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.5);
+  border: 1px solid #f1f5f9;
+  transition: all 0.15s;
+}
+
+.orderCard:hover {
+  background: #fff;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.orderId {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+  cursor: text;
+  user-select: none;
+}
+.orderStatus {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: #b45309;
+  background-color: #fef3c7;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  cursor: text;
+}
+.orderDate {
+  font-size: 11px;
+  color: #94a3b8;
+  cursor: text;
+}
+.orderPrice {
+  font-size: 15.75px;
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+  cursor: text;
+  margin: 0;
+}
+
+.orderDetailsBtn {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.orderDetailsBtn:hover {
+  text-decoration: underline;
+}
+
+.addressCard {
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.5);
+  border: 1px solid #f1f5f9;
+  transition: all 0.15s;
+  min-height: 164px;
+}
+.addressCard:hover {
+  background: #fff;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.addressTag {
+  font-size: 9px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  background: #eef2ff;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.addressName {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+  margin: 0;
+}
+.addressText {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  line-height: var(--lh-lg);
+  margin: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.addressActions {
+  border-top: 1px solid #f1f5f9;
+}
+
+.editBtn {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.editBtn:hover {
+  text-decoration: underline;
+}
+
+.deleteBtn {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: #f43f5e;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.deleteBtn:hover {
+  text-decoration: underline;
+}
+
+.addAddressBtn {
+  border: 2px dashed #e2e8f0;
+  border-radius: 16px;
+  background: none;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.15s;
+  width: 100%;
+  height: 164px;
+}
+.addAddressBtn:hover {
+  border-color: var(--text-primary);
+  background: rgba(238, 242, 255, 0.2);
+  color: var(--text-primary);
+}
+.addAddressLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.defaultBadge {
+  font-size: 9px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.setDefaultBtn {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: #64748b;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.setDefaultBtn:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+.settingsInfoCard {
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+}
+.settingsLabel {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+.settingsValue {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 467px) {
+  .tabBtn {
+    flex: 1;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 0;
+    padding: 10px 4px;
+    white-space: normal;
+    height: 70px;
+  }
+  .tabLabel {
+    flex: 1;
+    min-width: 0;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-align: center;
+    line-height: 1.3;
+    height: auto;
+  }
+  .tabDash {
+    padding: 16px;
+  }
+}
+
+.paginationInfo {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.paginationBtn {
+  width: 28px;
+  height: 28px;
+  font-size: var(--fs-xs);
+  color: white;
+  transition: all 0.15s;
+}
+
+
+.paginationBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

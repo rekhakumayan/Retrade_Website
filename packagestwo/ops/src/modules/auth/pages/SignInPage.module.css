@@ -1,0 +1,18 @@
+/* Layout styles for the auth module page. */
+.wrapper {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.content {
+  width: 100%;
+  max-width: 680px;
+  display: grid;
+  gap: 1rem;
+}
+
+.content p {
+  color: #667085;
+}

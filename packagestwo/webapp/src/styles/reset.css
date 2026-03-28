@@ -1,0 +1,6 @@
+/* Minimal CSS reset shared by the full app. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

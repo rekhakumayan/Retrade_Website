@@ -1,0 +1,80 @@
+/* [project]/src/sharedComponents/Button/Button.module.css [app-client] (css) */
+.Button-module__iFhxnG__button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #0000;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .25s;
+  display: inline-flex;
+}
+
+.Button-module__iFhxnG__primary {
+  color: #fff;
+  background-color: #6366f1;
+  box-shadow: 0 4px 12px #6366f140;
+}
+
+.Button-module__iFhxnG__primary:hover {
+  background-color: #5558e3;
+}
+
+.Button-module__iFhxnG__secondary {
+  color: #6366f1;
+  background-color: #eef2ff;
+  border: 1px solid #e0e7ff;
+}
+
+.Button-module__iFhxnG__secondary:hover {
+  color: #fff;
+  background-color: #6366f1;
+}
+
+.Button-module__iFhxnG__outline {
+  color: #475569;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.Button-module__iFhxnG__outline:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.Button-module__iFhxnG__iconOnly {
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.Button-module__iFhxnG__round {
+  border-radius: 50%;
+}
+
+.Button-module__iFhxnG__pill {
+  border-radius: 9999px;
+  padding: 10px 20px;
+}
+
+.Button-module__iFhxnG__fullWidth {
+  width: 100%;
+}
+
+.Button-module__iFhxnG__active {
+  color: #fff;
+  background-color: #6366f1;
+  border-color: #6366f1;
+}
+
+.Button-module__iFhxnG__button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=%5Bproject%5D_src_sharedComponents_Button_Button_module_css_bad6b30c._.single.css.map*/

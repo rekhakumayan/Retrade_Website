@@ -1,0 +1,315 @@
+.buttonStyle {
+    font-size: 15px;
+}
+
+.wrapperStyle {
+    padding: 35px;
+}
+
+.headline {
+    letter-spacing: -0.025em !important;
+    margin: 0px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+}
+
+.statCard {
+    background: #ffffff;
+    padding: 21px;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.card:hover span,
+.card:hover p,
+.card:hover h2 {
+    color: #ffffff !important;
+}
+
+.card:hover .iconBox svg {
+    stroke: #050101 !important;
+}
+
+.primary {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    color: #ffffff;
+    border: none;
+}
+
+.iconBox {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary {
+    background: rgba(0, 0, 0, 0.06);
+    color: #111827;
+}
+
+.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.indigo {
+    background: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
+}
+
+.badge {
+    font-size: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filterBar {
+    background: #ffffff;
+    padding: 8px 14px 14px 14px;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    margin-top: 28px;
+    min-height: 80px;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.searchInput {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    padding: 14px 14px 14px 42px;
+    background: #f8fafc;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    font-size: 12.25px;
+    font-weight: 600;
+}
+
+.filterInput {
+    width: 170px;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 14px 0 42px;
+    background: #f8fafc;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    font-weight: 600;
+    font-size: 12.25px;
+}
+
+.salesTableCard {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    overflow: hidden;
+    margin-top: 28px;
+}
+
+.salesTable {
+    width: 100%;
+    background: #ffffff;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* TABLE HEAD */
+
+.salesTable thead {
+    background: #f8fafc;
+}
+
+.salesTable thead th {
+    padding: 20px 24px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* TABLE BODY */
+
+.salesTable tbody td {
+    padding: 18px 24px;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.salesTable tbody tr:hover {
+    background: #f8fafc;
+    transition: 0.2s ease;
+}
+
+/* VENDOR */
+
+.salesAvatar {
+    width: 40px;
+    height: 40px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.salesShopName {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* COMMISSION */
+
+.salesCommissionBadge {
+    padding: 6px 12px;
+    background: #fef3c7;
+    color: #b45309;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+/* STATUS */
+
+.salesStatus {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.active {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.inactive {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.modalBackdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modalCard {
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.modalHeader {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.modalFooter {
+    border-top: 1px solid #f1f5f9;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* TABLE */
+
+.orderTable thead {
+    background: #f8fafc;
+}
+
+.orderTable th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+}
+
+.orderTable td {
+    vertical-align: middle;
+}
+
+/* STATUS */
+
+.completed {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.modalContainer {
+    max-width: 720px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:768px) {
+
+    .modalCard {
+        margin: 20px;
+    }
+
+    .avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+}

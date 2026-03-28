@@ -1,0 +1,123 @@
+.card {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--font-base);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.addAddressBtn {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: #e0e7ff;
+  border: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addressCard {
+  width: 100%;
+   border: 0.5px dashed blue;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-color:blue ;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.actionWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.addressTag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4f46e5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.address {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.primaryBtn {
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.primaryBtn:hover {
+  background-color: #4338ca;
+}
+
+/* ADD: selected address card highlight */
+.addressCardSelected {
+  border: 2px solid var(--text-primary) !important;
+  background: rgba(238, 242, 255, 0.4);
+}
+
+/* ADD: tick icon */
+.selectedTick {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: #fff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ADD: empty state */
+.emptyAddress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.emptyAddressText {
+  color: #94a3b8;
+  font-size: var(--fs-sm);
+}

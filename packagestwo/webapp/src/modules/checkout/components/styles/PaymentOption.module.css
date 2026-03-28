@@ -1,0 +1,107 @@
+.cardWrapper{
+  border-radius:20px;
+  border:1px solid #e5e7eb;
+  background:#ffffff;
+}
+
+
+.option{
+  cursor:pointer;
+  border:2px solid transparent;
+  background:#ffffff;
+  transition:all 0.25s ease;
+}
+
+.option:hover{
+  border-color:#c7d2fe;
+}
+
+
+.active{
+  border-color:#6366f1;
+  background:#f8f9ff;
+  box-shadow:0 4px 12px rgba(99,102,241,0.15);
+}
+
+
+.tickCircle{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background: var(--text-primary);
+  color: white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+
+.iconBox{
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f3f4f6;
+  border-radius:10px;
+}
+
+
+.badge{
+  font-size:10px;
+  background:#e0e7ff;
+  color:#6366f1;
+  padding:2px 6px;
+  border-radius:6px;
+  margin-left:6px;
+  font-weight:600;
+}
+
+.mode {
+  font-family: var(--font-base);
+  color: var(--text-secondary);
+}
+
+.modeDes {
+  font-family: var(--font-base);
+  color: var(--text-secondary);
+}
+
+.backbtn{
+  font-family: var(--font-base);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 12.25px;
+}
+
+.backbtn:hover{
+  text-decoration: underline;
+}
+
+.confirmBtn{
+  font-family:var(--font-base);
+  background-color:var(--text-primary);
+  font-weight:var(--fw-black);
+  border:none;
+  padding:14px 35px;
+  transition:all 0.2s ease;
+}
+
+.confirmBtn:hover{
+  background-color:#4f46e5;
+}
+
+
+@media (max-width:576px){
+
+  .iconBox{
+    width:36px;
+    height:36px;
+  }
+
+  .option{
+    padding:12px !important;
+  }
+
+}

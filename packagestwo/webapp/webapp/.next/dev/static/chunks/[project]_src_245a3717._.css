@@ -1,0 +1,565 @@
+/* [project]/src/styles/reset.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* [project]/src/styles/variables.css [app-client] (css) */
+:root {
+  --font-base: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fs-s: 10.5px;
+  --fs-xxs: 11px;
+  --fs-xs: 12.25px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 21px;
+  --fs-2xl: 24px;
+  --fs-3xl: 30px;
+  --fs-4xl: 36px;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+  --lh-sm: 1.25;
+  --lh-md: 1.6;
+  --lh-lg: 1.75;
+  --text-primary: #4f46e5;
+  --text-secondary: #0f172a;
+  --text-muted: #94a3b8;
+  --text-btn: #fff;
+  --bg-body: #f8fafc;
+}
+
+/* [project]/src/styles/typography.css [app-client] (css) */
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-sm);
+}
+
+h1 {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+}
+
+h2 {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-secondary);
+}
+
+h3 {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  font-weight: var(--fw-bold);
+}
+
+h4 {
+  font-size: var(--fs-xl);
+}
+
+h5 {
+  font-size: var(--fs-lg);
+}
+
+h6 {
+  font-size: var(--fs-md);
+}
+
+p {
+  font-size: var(--fs-md);
+  line-height: var(--lh-lg);
+  color: var(--text-secondary);
+  font-family: var(--font-base);
+}
+
+.text-lg {
+  font-family: var(--font-base);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.text-sm {
+  font-family: var(--font-base);
+  font-size: var(--fs-xxs);
+  color: var(--text-muted);
+}
+
+small, .text-small {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-md);
+  color: var(--text-muted);
+}
+
+.text-xs {
+  font-size: var(--fs-xs);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  font-family: var(--font-base);
+  font-size: var(--fs-xs);
+  color: var(--text-btn);
+  background-color: var(--text-primary);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.btn-text {
+  font-family: var(--font-base);
+  font-size: var(--fs-xs);
+  color: var(--text-btn);
+  background-color: var(--text-primary);
+  line-height: var(--lh-sm);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+span {
+  font-family: var(--font-base);
+}
+
+/* [project]/src/app/globals.css [app-client] (css) */
+html, body {
+  height: 100%;
+}
+
+body {
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.appHeader {
+  background: #fff;
+  border-bottom: 1px solid #eaecf0;
+  position: sticky;
+  top: 0;
+}
+
+.appHeaderInner {
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+}
+
+.appHeaderInner h1 {
+  font-size: 1rem;
+}
+
+.appHeader nav {
+  color: var(--color-muted);
+  gap: 1rem;
+  display: flex;
+}
+
+.homePage {
+  place-items: center;
+  min-height: calc(100vh - 72px);
+  padding: 1rem;
+  display: grid;
+}
+
+.card {
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1px solid #eaecf0;
+  gap: .9rem;
+  width: 100%;
+  max-width: 760px;
+  padding: 1.5rem;
+  display: grid;
+}
+
+.card p, .card li {
+  color: var(--color-muted);
+}
+
+.card ul {
+  margin-left: 1.2rem;
+}
+
+/* [project]/src/sharedComponents/Header/Header.module.css [app-client] (css) */
+.Header-module__GTSj0a__header {
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(12px);
+  height: 57px;
+  font-family: var(--font-base);
+  background: #fffffff2;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px #0000000d;
+}
+
+.Header-module__GTSj0a__headerRow {
+  flex-wrap: nowrap;
+  height: 56px;
+}
+
+.Header-module__GTSj0a__logoGroup {
+  cursor: pointer;
+  width: fit-content;
+  height: 31.5px;
+}
+
+.Header-module__GTSj0a__logoIcon {
+  background-color: var(--text-primary);
+  width: 31.5px;
+  min-width: 31.5px;
+  height: 31.5px;
+  color: var(--text-btn);
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: box-shadow .2s;
+  box-shadow: 0 4px 8px #4f46e54d;
+}
+
+.Header-module__GTSj0a__logoGroup:hover .Header-module__GTSj0a__logoIcon {
+  box-shadow: 0 4px 14px #4f46e573;
+}
+
+.Header-module__GTSj0a__logoText {
+  font-size: var(--fs-md);
+  letter-spacing: -.3px;
+  white-space: nowrap;
+  margin: 0 0 0 7px;
+}
+
+.Header-module__GTSj0a__actionsRow {
+  height: 34px;
+}
+
+.Header-module__GTSj0a__cartWrapper {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  transition: background-color .2s;
+  position: relative;
+}
+
+.Header-module__GTSj0a__cartWrapper:hover {
+  background-color: #f1f5f9;
+}
+
+.Header-module__GTSj0a__cartWrapper:hover .Header-module__GTSj0a__cartBtn {
+  color: var(--text-primary);
+}
+
+.Header-module__GTSj0a__cartBtn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  transition: color .2s;
+}
+
+.Header-module__GTSj0a__cartBadge {
+  background: var(--text-primary);
+  width: 16px;
+  height: 16px;
+  color: var(--text-btn);
+  font-size: 9px;
+  font-weight: var(--fw-bold);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+
+.Header-module__GTSj0a__loginBtn {
+  height: 31.5px;
+  font-size: var(--fs-xs);
+  margin: 0 0 0 10.5px;
+  padding: 7px 17.5px !important;
+}
+
+.Header-module__GTSj0a__profileBtn {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 34px;
+  display: flex;
+  padding: 3.5px 7px !important;
+}
+
+.Header-module__GTSj0a__profileBtn:hover {
+  background: #f1f5f9;
+}
+
+/* [project]/src/sharedComponents/Button/Button.module.css [app-client] (css) */
+.Button-module__iFhxnG__button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #0000;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .25s;
+  display: inline-flex;
+}
+
+.Button-module__iFhxnG__primary {
+  color: #fff;
+  background-color: #6366f1;
+  box-shadow: 0 4px 12px #6366f140;
+}
+
+.Button-module__iFhxnG__primary:hover {
+  background-color: #5558e3;
+}
+
+.Button-module__iFhxnG__secondary {
+  color: #6366f1;
+  background-color: #eef2ff;
+  border: 1px solid #e0e7ff;
+}
+
+.Button-module__iFhxnG__secondary:hover {
+  color: #fff;
+  background-color: #6366f1;
+}
+
+.Button-module__iFhxnG__outline {
+  color: #475569;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.Button-module__iFhxnG__outline:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.Button-module__iFhxnG__iconOnly {
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.Button-module__iFhxnG__round {
+  border-radius: 50%;
+}
+
+.Button-module__iFhxnG__pill {
+  border-radius: 9999px;
+  padding: 10px 20px;
+}
+
+.Button-module__iFhxnG__fullWidth {
+  width: 100%;
+}
+
+.Button-module__iFhxnG__active {
+  color: #fff;
+  background-color: #6366f1;
+  border-color: #6366f1;
+}
+
+.Button-module__iFhxnG__button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+/* [project]/src/modules/products/components/Searching.module.css [app-client] (css) */
+.Searching-module__8TOo0G__wrapper {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.Searching-module__8TOo0G__searchInputWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.Searching-module__8TOo0G__searchIcon {
+  color: #94a3b8;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.Searching-module__8TOo0G__searchInput {
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  width: 100%;
+  height: 32px;
+  padding: 12px 16px 12px 48px;
+  font-size: 14px;
+  transition: all .2s;
+}
+
+.Searching-module__8TOo0G__searchInput::placeholder {
+  color: #94a3b8;
+}
+
+.Searching-module__8TOo0G__searchInput:focus {
+  background-color: #fff;
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 3px #6366f11a;
+}
+
+@media (max-width: 991px) {
+  .Searching-module__8TOo0G__wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .Searching-module__8TOo0G__searchInputWrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .Searching-module__8TOo0G__searchInput {
+    padding: 10px 14px 10px 44px;
+    font-size: 13px;
+  }
+
+  .Searching-module__8TOo0G__searchIcon {
+    width: 18px;
+    height: 18px;
+    left: 14px;
+  }
+}
+
+/* [project]/src/sharedComponents/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__HWROaa__footer {
+  height: 74.5px;
+  font-family: var(--font-base);
+  background: #fff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.Footer-module__HWROaa__copyright {
+  line-height: 17.5px;
+  display: inline-block;
+}
+
+.Footer-module__HWROaa__linkBtn {
+  color: #64748b;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 17.5px;
+  transition: color .2s;
+}
+
+.Footer-module__HWROaa__linkBtn:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 767px) {
+  .Footer-module__HWROaa__footer {
+    height: 113px;
+  }
+}
+
+/*# sourceMappingURL=%5Bproject%5D_src_245a3717._.css.map*/

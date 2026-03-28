@@ -1,0 +1,108 @@
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.title {
+  font-family: var(--font-base);
+  font-size: 15.75px;
+  font-weight: var(--fw-black);
+  line-height: var(--lh-lg);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 8px 0;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.itemName {
+  font-family: var(--font-base);
+  font-size: var(--fs-xxs);
+  font-weight: var(--fw-bold);
+  color: #64748B;
+}
+
+.itemPrice {
+  font-family: var(--font-base);
+  font-size: var(--fs-xxs);
+  font-weight: var(--fw-black);
+  color: var(--text-secondary);
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.sbtitle {
+  font-family: var(--font-base);
+  font-size: var(--fs-s);
+  font-weight: var(--fw-bold);
+  color: #64748B;
+}
+
+.value {
+  font-family: var(--font-base);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-xxs);
+  color: var(--text-secondary);
+}
+
+.free {
+  font-family: var(--font-base);
+  color: #059669;
+  font-size: 9px;
+  font-weight: var(--fw-bold);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.totalLabel {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-s);
+  color: var(--text-secondary);
+}
+
+.totalPrice {
+  font-family: var(--font-base);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-black);
+  color: var(--text-primary);
+}
+
+.empty {
+  font-size: 14px;
+  color: #9ca3af;
+}

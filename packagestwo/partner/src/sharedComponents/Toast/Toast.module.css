@@ -1,0 +1,13 @@
+.successToast {
+  background: #16a34a !important;
+  color: white !important;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.errorToast {
+  background: #dc2626 !important;
+  color: white !important;
+  border-radius: 8px;
+  font-weight: 500;
+}

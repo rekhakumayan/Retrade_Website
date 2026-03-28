@@ -1,0 +1,9 @@
+.orderDetails{
+    font-size:14px;
+}
+.orderListScroll{
+    max-height:150px;
+    overflow-y:auto;
+    overflow-x:auto;
+    width:100%;
+}

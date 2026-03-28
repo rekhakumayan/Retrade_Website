@@ -1,0 +1,93 @@
+.FilterContainer {
+  background-color: #ffffff;
+  padding: 21px  ;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f1f5f9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-radius: 21px;
+  border: 1px solid #e2e8f0;
+}
+ 
+.categoryFilters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+  width: 100%;
+}
+.categoryFilters > * {
+  flex: 0 0 auto;
+}
+
+/* Hide scrollbar */
+.categoryFilters::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .wrapper {
+    /* padding: 0 2.5rem; */
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    /* padding: 0 3rem; */
+  }
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .categoryFilters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .categoryFilters::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .categoryFilters::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+
+  .categoryFilters::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .categoryFilters::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@media (max-width: 575px) {
+  .FilterContainer {
+    padding: 16px;
+  }
+}
+ 

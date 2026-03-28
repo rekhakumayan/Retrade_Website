@@ -1,0 +1,29 @@
+{
+  "name": "next-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.1",
+    "axios": "^1.13.2",
+    "bootstrap": "^5.3.8",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-datepicker": "^9.1.0",
+    "react-dom": "19.2.3",
+    "react-inlinesvg": "^4.2.0",
+    "react-modal": "^3.16.3",
+    "react-redux": "^9.2.0",
+    "recharts": "^3.7.0",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^16.1.6"
+  }
+}
