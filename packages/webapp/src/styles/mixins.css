@@ -1,5 +1,0 @@
-/* Reusable utility classes for layout shortcuts. */
-.centerGrid {
-  display: grid;
-  place-items: center;
-}
