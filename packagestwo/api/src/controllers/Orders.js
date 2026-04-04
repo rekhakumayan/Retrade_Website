@@ -231,12 +231,9 @@ class OrdersController {
     try {
       console.log("I AM WITHIN VENDOR DASHBOARD")
       const userId = request.auth.credentials.userId;
-      console.log("================================ user ID IS ")
-      console.log(userId)
+    
       const vendor = await vendorServices.getVendor(userId);
-      console.log("=========================VENDOR IS ")
-      console.log(vendor)
-
+     
       if (!vendor) {
         return h
           .response({

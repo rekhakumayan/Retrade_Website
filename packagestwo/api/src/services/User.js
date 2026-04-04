@@ -63,58 +63,212 @@ class UserServices {
 
   // GET VENDOR CUSTOMERS:
 
-  async getVendorCustomers(where, options) {
-    try {
-      const page = options.page || 1;
-      const limit = options.limit || 5;
-      const skip = (page - 1) * limit;
+  // async getVendorCustomers(where, options) {
+  //   try {
+  //     const page = options.page || 1;
+  //     const limit = options.limit || 5;
+  //     const skip = (page - 1) * limit;
 
-      const match = { ...where };
+  //     const match = { ...where };
 
-      if (match.date) {
-        const date = new Date(match.date);
+  //     if (match.date) {
+  //       const date = new Date(match.date);
 
-        const start = new Date(date.getFullYear(), date.getMonth(), 1);
+  //       const start = new Date(date.getFullYear(), date.getMonth(), 1);
 
-        const end = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-        end.setHours(23, 59, 59, 999);
+  //       const end = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+  //       end.setHours(23, 59, 59, 999);
 
-        match.createdAt = {
-          $gte: start,
-          $lte: end,
-        };
+  //       match.createdAt = {
+  //         $gte: start,
+  //         $lte: end,
+  //       };
 
-        delete match.date;
-      }
+  //       delete match.date;
+  //     }
 
-      const search = match.search;
-      delete match.search;
+  //     const search = match.search;
+  //     delete match.search;
 
-      const pipeline = [
-        {
-          $match: match,
-        },
+  //     const pipeline = [
+  //       {
+  //         $match: match,
+  //       },
 
-        {
-          $group: {
-            _id: "$userId",
+  //       {
+  //         $group: {
+  //           _id: "$userId",
 
-            orders: { $sum: 1 },
+  //           orders: { $sum: 1 },
 
-            grossSpend: { $sum: "$priceDetails.totalAmount" },
+  //           grossSpend: { $sum: "$priceDetails.totalAmount" },
 
-          phone: { $first: "$address.phone" },
+  //         phone: { $first: "$address.phone" },
           
-          firstSeen:{$min:"$createdAt"},
+  //         firstSeen:{$min:"$createdAt"},
+  //         ordersList: {
+  //           $push: {
+  //             orderId: "$orderId",
+  //             date: "$createdAt",
+  //             status: "$status",
+  //             totalAmount: "$priceDetails.totalAmount"
+  //           }
+  //         }
+  //       }
+  //     },
+
+  //     {
+  //       $lookup: {
+  //         from: "users",
+  //         localField: "_id",
+  //         foreignField: "_id",
+  //         as: "user"
+  //       }
+  //     },
+
+  //     {
+  //       $unwind: "$user"
+  //     },
+
+  //     ...(search ? [{
+  //       $match: {
+  //         $or: [
+  //           { "user.name": { $regex: search, $options: "i" } },
+  //           { "user.email": { $regex: search, $options: "i" } }
+  //         ]
+  //       }
+  //     }] : []),
+
+  //     {
+  //       $project: {
+  //         _id: 0,
+  //         customerId: "$user._id",
+  //         name: "$user.name",
+  //         email: "$user.email",
+  //         phone: 1,
+  //         registrationDate: "$user.createdAt",
+  //         orders: 1,
+  //         grossSpend: 1,
+  //         ordersList: 1,
+  //         firstSeen:1
+  //       }
+  //     },
+
+  //       {
+  //         $lookup: {
+  //           from: "users",
+  //           localField: "_id",
+  //           foreignField: "_id",
+  //           as: "user",
+  //         },
+  //       },
+
+  //       {
+  //         $unwind: "$user",
+  //       },
+
+  //       ...(search
+  //         ? [
+  //             {
+  //               $match: {
+  //                 $or: [
+  //                   { "user.name": { $regex: search, $options: "i" } },
+  //                   { "user.email": { $regex: search, $options: "i" } },
+  //                 ],
+  //               },
+  //             },
+  //           ]
+  //         : []),
+
+  //       {
+  //         $project: {
+  //           _id: 0,
+  //           customerId: "$user._id",
+  //           name: "$user.name",
+  //           email: "$user.email",
+  //           phone: 1,
+  //           registrationDate: "$user.createdAt",
+  //           orders: 1,
+  //           grossSpend: 1,
+  //           ordersList: 1,
+  //         },
+  //       },
+
+  //       { $sort: { grossSpend: -1 } },
+
+  //       { $skip: skip },
+
+  //       { $limit: limit },
+  //     ];
+
+  //     const result = await OrderSchema.aggregate(pipeline);
+
+  //     return result;
+  //   } catch (err) {
+  //     return ErrorHandler.error(err, { msg: err, code: 400 });
+  //   }
+  // }
+
+
+ 
+
+async getVendorCustomers(where, options) {
+  try {
+    const page = options.page || 1;
+    const limit = options.limit || 5;
+    const skip = (page - 1) * limit;
+
+    const match = { ...where };
+
+   
+    if (match.vendorId) {
+      match.vendorId = new mongoose.Types.ObjectId(match.vendorId);
+    }
+
+    if (match.date) {
+      const date = new Date(match.date);
+
+      const start = new Date(date.getFullYear(), date.getMonth(), 1);
+
+      const end = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+      end.setHours(23, 59, 59, 999);
+
+      match.createdAt = {
+        $gte: start,
+        $lte: end,
+      };
+
+      delete match.date;
+    }
+
+   
+    const search = match.search?.trim();
+    delete match.search;
+
+    
+    console.log("MATCH QUERY =>", match);
+
+    const pipeline = [
+      {
+        $match: match,
+      },
+
+      {
+        $group: {
+          _id: "$userId",
+          orders: { $sum: 1 },
+          grossSpend: { $sum: "$priceDetails.totalAmount" },
+          phone: { $first: "$address.phone" },
+          firstSeen: { $min: "$createdAt" },
           ordersList: {
             $push: {
               orderId: "$orderId",
               date: "$createdAt",
               status: "$status",
-              totalAmount: "$priceDetails.totalAmount"
-            }
-          }
-        }
+              totalAmount: "$priceDetails.totalAmount",
+            },
+          },
+        },
       },
 
       {
@@ -122,22 +276,26 @@ class UserServices {
           from: "users",
           localField: "_id",
           foreignField: "_id",
-          as: "user"
-        }
+          as: "user",
+        },
       },
 
       {
-        $unwind: "$user"
+        $unwind: "$user",
       },
 
-      ...(search ? [{
-        $match: {
-          $or: [
-            { "user.name": { $regex: search, $options: "i" } },
-            { "user.email": { $regex: search, $options: "i" } }
+      ...(search
+        ? [
+            {
+              $match: {
+                $or: [
+                  { "user.name": { $regex: search, $options: "i" } },
+                  { "user.email": { $regex: search, $options: "i" } },
+                ],
+              },
+            },
           ]
-        }
-      }] : []),
+        : []),
 
       {
         $project: {
@@ -150,64 +308,27 @@ class UserServices {
           orders: 1,
           grossSpend: 1,
           ordersList: 1,
-          firstSeen:1
-        }
+          firstSeen: 1,
+        },
       },
 
-        {
-          $lookup: {
-            from: "users",
-            localField: "_id",
-            foreignField: "_id",
-            as: "user",
-          },
-        },
+      { $sort: { grossSpend: -1 } },
 
-        {
-          $unwind: "$user",
-        },
+      { $skip: skip },
 
-        ...(search
-          ? [
-              {
-                $match: {
-                  $or: [
-                    { "user.name": { $regex: search, $options: "i" } },
-                    { "user.email": { $regex: search, $options: "i" } },
-                  ],
-                },
-              },
-            ]
-          : []),
+      { $limit: limit },
+    ];
 
-        {
-          $project: {
-            _id: 0,
-            customerId: "$user._id",
-            name: "$user.name",
-            email: "$user.email",
-            phone: 1,
-            registrationDate: "$user.createdAt",
-            orders: 1,
-            grossSpend: 1,
-            ordersList: 1,
-          },
-        },
+    const result = await OrderSchema.aggregate(pipeline);
 
-        { $sort: { grossSpend: -1 } },
-
-        { $skip: skip },
-
-        { $limit: limit },
-      ];
-
-      const result = await OrderSchema.aggregate(pipeline);
-
-      return result;
-    } catch (err) {
-      return ErrorHandler.error(err, { msg: err, code: 400 });
-    }
+    return result;
+  } catch (err) {
+    console.error("ERROR IN getVendorCustomers:", err);
+    return ErrorHandler.error(err, { msg: err.message, code: 400 });
   }
+}
+
+
   async findById(userId) {
     try {
       return await UserSchema.findById(userId).select("-password");

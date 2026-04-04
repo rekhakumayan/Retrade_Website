@@ -60,7 +60,6 @@ class UserController {
       }).code(404);
     }
 
-    // ✅ Vendor check ONLY for vendorapp
     if (platform === 'vendorapp') {
       if (!vendorId) {
         return h.response({
@@ -374,11 +373,8 @@ class UserController {
   static async fetchCustomers(request, h) {
     try {
       const userId = request.auth.credentials.userId;
-      console.log("====================== USER ID ")
-      console.log(userId)
       const vendor = await Vendor.findOne({ userId });
-      console.log("============================ VENDOR IS ")
-      console.log(vendor)
+
       if (!vendor) {
         return h
           .response({

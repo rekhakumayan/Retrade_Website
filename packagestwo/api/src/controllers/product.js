@@ -35,7 +35,7 @@ class ProductController {
 // GET
   async get(request, h) {
     try {
-
+       console.log("---------------------------------------------------------------------I AM WITHIN PRODUCT CONTROLLER ")
       let { where = {}, options } = request.parsedQuery;
       const vendorId = request.query.vendorId; 
       if (!vendorId) {

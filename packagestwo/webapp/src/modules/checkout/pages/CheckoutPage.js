@@ -7,7 +7,6 @@ import OrderSummary from "@/modules/checkout/components/OrderSummary";
 import PaymentOption from "@/modules/checkout/components/PaymentOption";
 import FinalReview from "@/modules/checkout/components/FinalReview";
 import OrderConfirm from "@/modules/checkout/components/OrderConfirm";
-// import AddAddressModal from "@/modules/checkout/components/AddAddressModal";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./CheckoutPage.module.css";
@@ -80,8 +79,7 @@ const CheckoutPage = () => {
 
             {step === 1 && (
               <DeliveryDetails
-                onSelectPayment={() => setStep(2)}
-                onAddAddress={handleAddAddress}
+                 onReview={() => setStep(2)}
               />
             )}
 
@@ -118,12 +116,12 @@ const CheckoutPage = () => {
         </div>
 
         
-        {showAddAddress && (
+       {/* {showAddAddress && (
           <AddAddressModal
             show={showAddAddress}
             onClose={() => setShowAddAddress(false)}
           />
-        )}
+        )} */}
 
       </div>
     </div>
