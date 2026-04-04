@@ -117,7 +117,7 @@ const DashboardPage = () => {
               <div>
                 <h4 className="text-dark fw-bold d-flex align-items-center gap-2 mb-0">
                   <SVG src="/assets/image/svg/revenue-trend.svg" />
-                  Marketplace Revenue Trend
+                   Retrade Revenue Trend
                 </h4>
 
                 <p

@@ -59,7 +59,7 @@ function LoginForm() {
           </div>
 
           <h2 className={`${styles.fw_900_tight}`}>
-            MarketNest Admin
+            Retrade Admin
           </h2>
 
           <p className={`text-muted fw-medium ${styles.ops_ty}`}>

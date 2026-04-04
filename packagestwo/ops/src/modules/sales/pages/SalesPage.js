@@ -167,7 +167,7 @@ const SalesPage = () => {
 
   const salesCards = [
     {
-      title: 'Total Marketplace Commission',
+      title: 'Total Retrade Commission',
       value: `$${totalCommission}`,
       badge: 'Selected Month',
       icon: '/assets/image/svg/walletIcon.svg',
