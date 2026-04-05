@@ -4,7 +4,7 @@ import "./globals.css";
 import Providers from "./providers";
 import Header from "@/sharedComponents/Header/Header";
 import Footer from "@/sharedComponents/Footer/Footer";
-
+import { Suspense } from "react";
 
 
 
@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body >
         <Providers>
-          <Header />
+           <Suspense fallback={null}>
+            <Header />
+          </Suspense>
           <main style={{ flex: 1 }}>
             {children}
           </main>
