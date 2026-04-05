@@ -50,7 +50,7 @@ export const getDashboard = () => async (dispatch, getState) => {
     dispatch(setError(null));
 
     const res = await axios.get(
-      `http://localhost:8000/v1/orders/vendor-dashboard`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/v1/orders/vendor-dashboard`,
       {
         headers: {
           Authorization: `Bearer ${token}`

@@ -23,7 +23,7 @@ export const fetchOrders = createAsyncThunk(
     );
 
     const query = new URLSearchParams(cleanParams).toString();
-    const response = await fetch(`http://localhost:8000/v1/orders?${query}`,{
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/v1/orders?${query}`,{
        headers: {
     Authorization: `Bearer ${token}`,
     "Content-Type": "application/json"
