@@ -6,6 +6,8 @@
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
+
+  flex-wrap: wrap; /* important */
 }
 
 .imageCol {
@@ -21,8 +23,6 @@
 }
 
 .content {
-  width: 400.91px;
-  height: 71.99px;
   flex: 1;
   min-width: 0;
 }
@@ -127,4 +127,18 @@
   .prices {
     min-width: auto;
   }
+}
+
+@media (max-width: 768px) {
+
+  .cartItem {
+    align-items: flex-start;
+  }
+
+  .prices {
+    width: 100%;
+    text-align: left;
+    margin-top: 6px;
+  }
+
 }
